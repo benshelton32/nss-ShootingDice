@@ -16,7 +16,7 @@ namespace ShootingDice
         public override int Roll()
         {
             int rollValue = new Random().Next(DiceSize) + 1;
-            string selectedTaunt = Taunts[new Random().Next(0, Taunts.Count + 1)];
+            string selectedTaunt = Taunts[new Random().Next(Taunts.Count)];
             Console.WriteLine(selectedTaunt);
             return rollValue;
         }
