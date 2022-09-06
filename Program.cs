@@ -53,6 +53,13 @@ namespace ShootingDice
 
             Console.WriteLine("-------------------");
 
+            CreativeSmackTalkingPlayer creativeSmackTalker = new CreativeSmackTalkingPlayer();
+            creativeSmackTalker.Name = "Haley";
+
+            creativeSmackTalker.Play(player1);
+
+            Console.WriteLine("-------------------");
+
             List<Player> players = new List<Player>() {
                 player1, player2, player3, large
             };
