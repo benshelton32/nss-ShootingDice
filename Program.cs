@@ -63,7 +63,14 @@ namespace ShootingDice
             SoreLoserPlayer soreLoser = new SoreLoserPlayer();
             soreLoser.Name = "Ben";
 
-            soreLoser.Play(player1);
+            try
+            {
+                soreLoser.Play(player1);
+            }
+            catch
+            {
+                Console.WriteLine($"{soreLoser.Name} refuses to accept the results..");
+            }
 
             Console.WriteLine("-------------------");
 
@@ -74,9 +81,31 @@ namespace ShootingDice
 
             Console.WriteLine("-------------------");
 
+            SoreLoserUpperHalfPlayer soreLoserUpperHalfPlayer = new SoreLoserUpperHalfPlayer();
+            soreLoserUpperHalfPlayer.Name = "Mangum";
+
+            try
+            {
+                soreLoserUpperHalfPlayer.Play(player1);
+            }
+            catch
+            {
+                Console.WriteLine($"{soreLoserUpperHalfPlayer.Name} refuses to accept the results..");
+            }
+
+            Console.WriteLine("-------------------");
+
             List<Player> players = new List<Player>() {
                 player1, player2, player3, large
             };
+
+            // players.Add(smackTalker);
+            // players.Add(higherPlayer);
+            // players.Add(humanPlayer);
+            // players.Add(creativeSmackTalker);
+            // players.Add(soreLoser);
+            // players.Add(upperHalfPlayer);
+            // players.Add(soreLoserUpperHalfPlayer);
 
             PlayMany(players);
         }
