@@ -40,9 +40,16 @@ namespace ShootingDice
             Console.WriteLine("-------------------");
 
             OneHigherPlayer higherPlayer = new OneHigherPlayer();
-            higherPlayer.Name = "Billy";
+            higherPlayer.Name = "Mason";
 
             higherPlayer.Play(player1);
+
+            Console.WriteLine("-------------------");
+
+            HumanPlayer humanPlayer = new HumanPlayer();
+            humanPlayer.Name = "Brittany";
+
+            humanPlayer.Play(player1);
 
             Console.WriteLine("-------------------");
 
