@@ -21,14 +21,7 @@ namespace ShootingDice
             }
             else if (myRoll < otherRoll)
             {
-                try
-                {
-                    int divideByZero = myRoll / 0;
-                }
-                catch (DivideByZeroException)
-                {
-                    Console.WriteLine($"{Name} refuses to accept the results..");
-                }
+                throw new Exception("SoreLoserAlert");
             }
             else
             {
